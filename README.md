@@ -40,7 +40,7 @@ Main React components have been tested with Snapshot testing. -->
 
 ## Live Link of the project
 
-[Live-Bookstore](https://calculator-react-microakshay.herokuapp.com/)
+[Live-Bookstore](https://bookstore-akshay.herokuapp.com/)
 
 ## Author
 
