@@ -1,4 +1,6 @@
 export default function Booksform() {
+  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+
   return (
     <div className="container border mt-5 p-5">
       <div className="mb-3">
@@ -6,19 +8,19 @@ export default function Booksform() {
           Book Title
           <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Title" />
         </label>
+
       </div>
+      <div className="mb-3">
+        <label htmlFor="exampleselectInput1" className="form-label">
 
-      <select className="form-select w-50" aria-label="selectbooks">
-        <option defaultValue="">Select Book Category</option>
-        <option value="1">Action</option>
-        <option value="2">Biography</option>
-        <option value="3">Horror</option>
-        <option value="4">Kids</option>
-        <option value="5">Learning</option>
-        <option value="6">Sci-Fi</option>
-      </select>
+          Select Category
 
-      <button type="button" className="btn btn-dark mt-3">Submit</button>
+          <select className="form-select form-control" id="exampleselectInput1" aria-label="selectbooks">
+            {categories.map((x, i) => <option value={i} key={Math.random()}>{x}</option>)}
+          </select>
+        </label>
+      </div>
+      <button type="button" className="btn btn-dark ">Submit</button>
     </div>
   );
 }
