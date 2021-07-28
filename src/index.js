@@ -5,15 +5,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './Components/App';
-import bookupdateReducer from './Reducers/books';
+import rootReducer from './Reducers/index';
 
-const store = createStore(bookupdateReducer);
+const store = createStore(rootReducer);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
+  <Provider store={store}>
+    <React.StrictMode>
+
       <App />
-    </Provider>
-  </React.StrictMode>,
+    </React.StrictMode>
+
+  </Provider>,
+
   document.getElementById('root'),
 );
