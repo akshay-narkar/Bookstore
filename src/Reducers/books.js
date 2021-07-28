@@ -1,8 +1,6 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../Actions';
 
-const initstate = { books: [{ Id: Math.random(), Title: 'Harry Potter & The Prisoners of Askaban', Category: 'Kids' }, { Id: Math.random(), Title: 'Shoe Dog', Category: 'Biography' }, { Id: Math.random(), Title: 'The Great Gatsby', Category: 'Action' }] };
-
-const bookupdateReducer = (state = initstate, action) => {
+const bookupdateReducer = (state = [], action) => {
   let statenew;
   switch (action.type) {
     case CREATE_BOOK:
