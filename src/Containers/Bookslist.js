@@ -27,7 +27,6 @@ function Bookslist(props) {
 
 function mapStateToProps(state) {
   const { books } = state;
-  // const { books } = bookupdateReducer;
   return ({ booklist: books });
 }
 

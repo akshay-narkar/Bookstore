@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './Components/App';
-// import rootReducer from './Reducers/index';
 import rootReducer from './Reducers/books';
 
 const initstate = {
