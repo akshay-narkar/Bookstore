@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Book from '../Presentational/book';
+import Book from '../Components/book';
 
 function Bookslist(props) {
   const { booklist } = props;
@@ -26,8 +26,8 @@ function Bookslist(props) {
 }
 
 function mapStateToProps(state) {
-  const { bookupdateReducer } = state;
-  const { books } = bookupdateReducer;
+  const { books } = state;
+  // const { books } = bookupdateReducer;
   return ({ booklist: books });
 }
 
