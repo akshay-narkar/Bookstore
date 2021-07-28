@@ -1,5 +1,4 @@
-import '../App.css';
-import Booksform from './Booksform';
+import Booksform from '../Containers/Booksform';
 import Bookslist from '../Containers/Bookslist';
 
 export default function App() {

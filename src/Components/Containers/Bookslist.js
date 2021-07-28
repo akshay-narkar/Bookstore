@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Book from '../Components/book';
+import Book from '../Presentational/book';
 
 function Bookslist(props) {
   const { booklist } = props;
