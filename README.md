@@ -21,7 +21,7 @@ To set up a local copy of the project
 
 - `git clone git@github.com:akshay-narkar/Bookstore.git`
 - `cd Bookstore`
-- `git checkout setup`
+- `git checkout milestone-2`
 
 If you want to repack the file
 
