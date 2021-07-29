@@ -2,6 +2,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../Components/book';
 
+const handleRemoveBook = (event) => {
+  console.log(event.target.parentElement.parentElement.firstElementChild.textContent);
+};
+
 function Bookslist(props) {
   const { booklist } = props;
   return (
@@ -13,11 +17,20 @@ function Bookslist(props) {
             <th scope="col">Id</th>
             <th scope="col">Title</th>
             <th scope="col">Category</th>
+            <th scope="col">Remove</th>
+
           </tr>
         </thead>
         <tbody>
 
-          {booklist.map((x) => <tr key={x.Id}><Book book={x} /></tr>)}
+          {booklist.map((x) => (
+            <tr key={x.Id}>
+              <Book
+                book={x}
+                clickHandler={handleRemoveBook}
+              />
+            </tr>
+          ))}
 
         </tbody>
       </table>
@@ -34,4 +47,4 @@ Bookslist.propTypes = {
   booklist: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default connect(mapStateToProps, null)(Bookslist);
+export default connect(mapStateToProps)(Bookslist);
