@@ -9,12 +9,12 @@ import rootReducer from './Reducers/books';
 
 const initstate = {
   books: [{
-    Id: Math.random(),
+    Id: Math.floor((Math.random() * 1000000)),
     Title: 'Harry Potter & The Prisoners of Askaban',
     Category: 'Kids',
   },
-  { Id: Math.random(), Title: 'Shoe Dog', Category: 'Biography' },
-  { Id: Math.random(), Title: 'The Great Gatsby', Category: 'Action' }],
+  { Id: Math.floor((Math.random() * 1000000)), Title: 'Shoe Dog', Category: 'Biography' },
+  { Id: Math.floor((Math.random() * 1000000)), Title: 'The Great Gatsby', Category: 'Action' }],
 };
 
 const store = createStore(rootReducer, initstate);
