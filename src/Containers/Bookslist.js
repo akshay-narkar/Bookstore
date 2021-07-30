@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../Components/book';
-
-const handleRemoveBook = (event) => {
-  console.log(event.target.parentElement.parentElement.firstElementChild.textContent);
-};
+import { removeBook } from '../Actions/index';
 
 function Bookslist(props) {
   const { booklist } = props;
+  const { removebook } = props;
+  const handleRemoveBook = (event) => {
+    removebook(event.target.parentElement.parentElement.id);
+  };
+
   return (
     <div className="mt-5">
       <h1>Books</h1>
@@ -23,8 +25,8 @@ function Bookslist(props) {
         </thead>
         <tbody>
 
-          {booklist.map((x) => (
-            <tr key={x.Id}>
+          {booklist.map((x, i) => (
+            <tr key={x.Id} id={i}>
               <Book
                 book={x}
                 clickHandler={handleRemoveBook}
@@ -43,8 +45,13 @@ function mapStateToProps(state) {
   return ({ booklist: books });
 }
 
+/* eslint-disable-next-line */
+const mapDispatchToProps = (dispatch) => ({ removebook: (book) => { dispatch(removeBook(book)); } });
+
 Bookslist.propTypes = {
   booklist: PropTypes.arrayOf(PropTypes.object).isRequired,
+  removebook: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps)(Bookslist);
+export default connect(mapStateToProps, mapDispatchToProps)(Bookslist);
+// export default Bookslist;
