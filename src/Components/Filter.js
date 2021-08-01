@@ -8,7 +8,7 @@ function CategoryFilter(props) {
   return (
 
     <div className="ms-5">
-      <label htmlFor="exampleselectInput1" className="form-label d-flex align-content-baseline m-0">
+      <label htmlFor="exampleselectInput1" className="form-label d-flex align-items-baseline m-0">
 
         <p className="m-0">Categories:</p>
 
