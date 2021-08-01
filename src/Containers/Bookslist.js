@@ -14,7 +14,7 @@ function Bookslist(props) {
   };
 
   const handleFilterChange = (event) => {
-    filtercat(event.target.value);
+    filtercat(event);
   };
 
   const filterbooks = (booklist, filter) => {
