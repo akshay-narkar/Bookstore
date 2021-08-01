@@ -16,8 +16,7 @@ function CategoryFilter(props) {
 
           <option value="All">All</option>
 
-          { /* eslint-disable-next-line */ }
-                {categories.map((x) => <option value={x} key={Math.random()}>{x}</option>)}
+          {categories.map((x) => <option value={x} key={Math.random()}>{x}</option>)}
         </select>
       </label>
     </div>
