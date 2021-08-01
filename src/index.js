@@ -8,7 +8,7 @@ import App from './Components/App';
 import rootReducer from './Reducers/index';
 
 const initstate = {
-  filter: null,
+  filter: 'All',
   books: [{
     Id: Math.floor((Math.random() * 1000000)),
     Title: 'Harry Potter & The Prisoners of Askaban',
@@ -18,7 +18,10 @@ const initstate = {
   { Id: Math.floor((Math.random() * 1000000)), Title: 'The Great Gatsby', Category: 'Action' }],
 };
 
-const store = createStore(rootReducer, { bookupdateReducer: initstate });
+const store = createStore(rootReducer, {
+  bookupdateReducer: initstate,
+  filterReducer: initstate,
+});
 
 ReactDOM.render(
   <Provider store={store}>
