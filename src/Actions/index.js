@@ -15,12 +15,12 @@ const removeBook = (index) => ({
   index,
 });
 
-const changefilter = (category) => ({
+const changeFilter = (category) => ({
   type: CHANGE_FILTER,
   category,
 });
 
 
 export {
-  CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER, createBook, removeBook, changefilter,
+  CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER, createBook, removeBook, changeFilter,
 };
