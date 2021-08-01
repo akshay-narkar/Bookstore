@@ -1,7 +1,6 @@
 const CREATE_BOOK = 'CREATE_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
-const CHANGE_FILTER = 'CHANGE_FILTER';
-
+// const CHANGE_FILTER = 'CHANGE_FILTER';
 
 function createBook(book) {
   return ({
@@ -16,11 +15,10 @@ const removeBook = (index) => ({
 });
 
 const changeFilter = (category) => ({
-  type: CHANGE_FILTER,
+  // type: CHANGE_FILTER,
   category,
 });
 
-
 export {
-  CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER, createBook, removeBook, changeFilter,
+  CREATE_BOOK, REMOVE_BOOK, createBook, removeBook, changeFilter,
 };
