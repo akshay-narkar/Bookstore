@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../Components/book';
-import { removeBook } from '../Actions/index';
+import CategoryFilter from '../Components/Filter';
+import { removeBook, changeFilter } from '../Actions/index';
 
 function Bookslist(props) {
   const { booklist } = props;
@@ -10,9 +11,17 @@ function Bookslist(props) {
     removebook(event.target.parentElement.parentElement.id);
   };
 
+  const handleFilterChange = () => {
+    console.log('rabdon');
+  };
+
   return (
+
     <div className="mt-5">
-      <h1>Books</h1>
+      <div className="d-flex d-align-items-center mb-5">
+        <h1 className="m-0">Books</h1>
+        <CategoryFilter clickHandler={handleFilterChange} />
+      </div>
       <table className="table">
         <thead>
           <tr>
@@ -46,7 +55,8 @@ function mapStateToProps(state) {
 }
 
 /* eslint-disable-next-line */
-const mapDispatchToProps = (dispatch) => ({ removebook: (book) => { dispatch(removeBook(book)); } });
+const mapDispatchToProps = (dispatch) => ({ removebook: (book) => { dispatch(removeBook(book)); } },
+{ filtercat: (category) => { dispatch(changeFilter(category)); } });
 
 Bookslist.propTypes = {
   booklist: PropTypes.arrayOf(PropTypes.object).isRequired,
