@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './Components/App';
-import rootReducer from './Reducers/books';
+import rootReducer from './Reducers/index';
 
 const initstate = {
   books: [{
@@ -17,7 +17,9 @@ const initstate = {
   { Id: Math.floor((Math.random() * 1000000)), Title: 'The Great Gatsby', Category: 'Action' }],
 };
 
-const store = createStore(rootReducer, initstate);
+// const store = createStore(rootReducer, initstate);
+// const store = createStore(rootReducer, { user: [], window: { location: "windowone" } }, applyMiddleware(...middleWare));
+const store = createStore(rootReducer, { bookupdateReducer: initstate });
 
 ReactDOM.render(
   <Provider store={store}>
