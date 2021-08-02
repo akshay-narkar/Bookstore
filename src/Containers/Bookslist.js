@@ -14,7 +14,7 @@ function Bookslist(props) {
   };
 
   const handleFilterChange = (event) => {
-    filtercat(event);
+    filtercat(event.target.value);
   };
 
   const filterbooks = (booklist, filter) => {
@@ -28,7 +28,10 @@ function Bookslist(props) {
     <div className="mt-5">
       <div className="d-flex d-align-items-center mb-5">
         <h1 className="m-0">Books</h1>
-        <CategoryFilter clickHandler={handleFilterChange} />
+        <CategoryFilter
+          clickHandler={handleFilterChange}
+          filtercat={filternew}
+        />
       </div>
       <table className="table">
         <thead>
