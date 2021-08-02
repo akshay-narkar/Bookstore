@@ -11,6 +11,7 @@ function Booksform(props) {
     Title: null,
     Category: '',
   });
+
   const handleChange = (event) => {
     if (event.target.id === 'exampleselectInput1' && event.target.value !== '') {
       setState1((prevstate) => ({ ...prevstate, Category: event.target.value }));
@@ -24,6 +25,7 @@ function Booksform(props) {
     addnewbook(state);
     setState1(() => ({ Title: null, Category: '' }));
   };
+
   return (
     <div className="container border mt-5 p-5">
 
@@ -66,7 +68,4 @@ function mapDispatchToProps(dispatch) {
     },
   };
 }
-/* eslint-disable-next-line */
-// const mapDispatchToProps = (dispatch) => ({ addnewbook: (book) => { dispatch(createBook(book)); } });
-
 export default connect(null, mapDispatchToProps)(Booksform);
