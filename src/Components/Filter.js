@@ -1,19 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 function CategoryFilter(props) {
-  const [value1, setvalue] = useState({ value: 'All' });
-  const { clickHandler } = props;
+  const { clickHandler, filtercat } = props;
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-
-  const changevalue = (event) => {
-    setvalue({ value: event });
-  };
-
-  const middlefunc = (e) => {
-    clickHandler(e.target.value);
-    changevalue(e.target.value);
-  };
 
   return (
 
@@ -23,10 +13,10 @@ function CategoryFilter(props) {
         <p className="m-0">Categories:</p>
 
         <select
-          value={value1.value}
+          value={filtercat}
           className="form-select ms-2"
           aria-label="selectcategory"
-          onChange={middlefunc}
+          onChange={clickHandler}
         >
 
           <option value="All" defaultValue>All</option>
@@ -48,6 +38,7 @@ function CategoryFilter(props) {
 
 CategoryFilter.propTypes = {
   clickHandler: PropTypes.func.isRequired,
+  filtercat: PropTypes.string.isRequired,
 };
 
 export default CategoryFilter;
