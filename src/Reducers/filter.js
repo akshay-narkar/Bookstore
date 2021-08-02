@@ -1,6 +1,10 @@
 import { CHANGE_FILTER } from '../Actions';
 
-const filterReducer = (state = [], action) => {
+const initstate = {
+  filter: 'All',
+};
+
+const filterReducer = (state = initstate, action) => {
   let statenew = { ...state };
   switch (action.type) {
     case CHANGE_FILTER:
