@@ -26,36 +26,35 @@ function Bookslist(props) {
   return (
 
     <div className="mt-5">
-      <div className="d-flex d-align-items-center mb-5">
-        <h1 className="m-0">Books</h1>
-        <CategoryFilter
-          clickHandler={handleFilterChange}
-          filtercat={filternew}
-        />
+      <div className="d-flex justify-content-between align-items-center mb-5 bookstore-header d-flex">
+        <div className="d-flex align-items-center">
+          <h1 className="m-0 azure montreg fw-bold">Bookstore CMS</h1>
+          <p className="ms-5 my-0 montreg bookssize">BOOKS</p>
+          <CategoryFilter
+            clickHandler={handleFilterChange}
+            filtercat={filternew}
+          />
+        </div>
+        <div>
+          <i className="fas fa-user-circle azure fa-2x" aria-hidden="true" />
+        </div>
       </div>
-      <table className="table">
-        <thead>
-          <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Title</th>
-            <th scope="col">Category</th>
-            <th scope="col">Remove</th>
+      <div className="table-class">
+        <table className="table">
+          <tbody>
 
-          </tr>
-        </thead>
-        <tbody>
+            {filteredbooks.map((x, i) => (
+              <tr key={x.Id} id={i}>
+                <Book
+                  book={x}
+                  clickHandler={handleRemoveBook}
+                />
+              </tr>
+            ))}
 
-          {filteredbooks.map((x, i) => (
-            <tr key={x.Id} id={i}>
-              <Book
-                book={x}
-                clickHandler={handleRemoveBook}
-              />
-            </tr>
-          ))}
-
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

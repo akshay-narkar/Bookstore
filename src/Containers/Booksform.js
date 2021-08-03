@@ -27,31 +27,29 @@ function Booksform(props) {
   };
 
   return (
-    <div className="container border mt-5 p-5">
-
+    <div className="container addbooks">
+      <h4 className="bordertop montreg fw-bold">ADD NEW BOOKS</h4>
       <form onSubmit={submitChange}>
-        <div className="form-group">
+        <div className="form-group d-flex justify-content-between">
           <div className="mb-3">
             <label htmlFor="exampleFormControlInput1" className="form-label">
-              Book Title
-              <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Title" onChange={handleChange} required />
+              <input type="text" className="form-control text-box" id="exampleFormControlInput1" placeholder="Title" onChange={handleChange} required />
             </label>
 
           </div>
           <div className="mb-3">
             <label htmlFor="exampleselectInput1" className="form-label">
+              <select className="form-select form-control catselect" value={state.Category} id="exampleselectInput1" aria-label="selectbooks" onChange={handleChange} required>
+                <option value="" disabled>Category</option>
 
-              Select Category
-
-              <select className="form-select form-control" value={state.Category} id="exampleselectInput1" aria-label="selectbooks" onChange={handleChange} required>
-                <option value="" disabled>Select category...</option>
-
-                { /* eslint-disable-next-line */ }
+                { /* eslint-disable-next-line */}
                 {categories.map((x) => <option value={x} key={Math.random()}>{x}</option>)}
               </select>
             </label>
           </div>
-          <button type="submit" className="btn btn-dark">Submit</button>
+          <div>
+            <button type="submit" className="btn btn-primary roboto">ADD BOOK</button>
+          </div>
         </div>
       </form>
     </div>
