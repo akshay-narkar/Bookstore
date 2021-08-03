@@ -10,7 +10,7 @@ function CategoryFilter(props) {
     <div className="ms-5">
       <label htmlFor="exampleselectInput1" className="form-label d-flex align-items-baseline m-0">
 
-        <p className="m-0">Categories:</p>
+        <p className="m-0 montreg opacity bookssize">CATEGORIES:</p>
 
         <select
           value={filtercat}
