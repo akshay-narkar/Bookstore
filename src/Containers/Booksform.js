@@ -48,7 +48,7 @@ function Booksform(props) {
             </label>
           </div>
           <div>
-            <button type="submit" className="btn btn-primary roboto">ADD BOOK</button>
+            <button type="submit" className="btn btn-primary roboto robotoplus addbook">ADD BOOK</button>
           </div>
         </div>
       </form>
