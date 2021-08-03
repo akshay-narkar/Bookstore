@@ -40,20 +40,18 @@ function Bookslist(props) {
         </div>
       </div>
       <div className="table-class">
-        <table className="table">
-          <tbody>
+        <div>
 
-            {filteredbooks.map((x, i) => (
-              <tr key={x.Id} id={i}>
-                <Book
-                  book={x}
-                  clickHandler={handleRemoveBook}
-                />
-              </tr>
-            ))}
+          {filteredbooks.map((x, i) => (
+            <div className="bg-white mb-4" key={x.Id} id={i}>
+              <Book
+                book={x}
+                clickHandler={handleRemoveBook}
+              />
+            </div>
+          ))}
 
-          </tbody>
-        </table>
+        </div>
       </div>
     </div>
   );
