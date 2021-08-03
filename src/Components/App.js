@@ -3,9 +3,9 @@ import Bookslist from '../Containers/Bookslist';
 
 export default function App() {
   return (
-    <div className="container">
-      <Booksform />
+    <div className="container main-app">
       <Bookslist />
+      <Booksform />
     </div>
   );
 }
