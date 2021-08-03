@@ -1,22 +1,82 @@
 body {
+  background: #f5f6fa;
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Montserrat", "Roboto", "Roboto Slab", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+#root {
+  width: 87.5rem;
+  margin: auto;
+}
+
+.main-app {
+  margin: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 35px -9px;
+  background-color: #f8f9fa;
+  padding: 0;
+}
+
+.bookstore-header {
+  background-color: white;
+  padding: 1.5rem 3.5rem;
+}
+
+.table-class {
+  padding: 2rem 3.5rem;
+}
+
+.addbooks {
+  padding: 0 3.5rem 1.5rem;
+}
+
+.bordertop {
+  display: block;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 2rem;
+  color: #888;
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.azure {
+  color: #0290ff;
+}
+
+.border-lower {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.montreg {
+  font-family: "Montserrat", sans-serif;
+}
+
+.bookssize {
+  font-size: 0.813rem;
+}
+
+.opacity {
+  opacity: 0.5;
+}
+
+.roboto {
+  font-family: "Roboto Slab", sans-serif;
+  width: 11.5rem;
+  font-size: small;
+}
+
+.text-box {
+  width: 41.5rem;
+}
+
+.catselect {
+  width: 17.5rem;
+}
+
+/* code {
   font-family:
     source-code-pro,
     Menlo,
@@ -24,4 +84,4 @@ code {
     Consolas,
     'Courier New',
     monospace;
-}
+} */
