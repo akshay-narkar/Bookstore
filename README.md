@@ -1,8 +1,8 @@
-# Bookstore with React & Redux
+# Magic-books Inc Bookstore
 
 A Bookstore CMS built for a virtual client using React & Redux to help manage & organize their bookstore
 
-## Calculator screenshot
+## Bookstore screenshot
 
 ![screenshot](./bookstore.png)
 
