@@ -8,7 +8,7 @@ function Booksform(props) {
   const { addnewbook } = props;
   const [state, setState1] = useState({
     Id: Math.floor((Math.random() * 1000000)),
-    Title: null,
+    Title: '',
     Category: '',
   });
 
@@ -23,7 +23,7 @@ function Booksform(props) {
   const submitChange = (e) => {
     e.preventDefault();
     addnewbook(state);
-    setState1(() => ({ Title: null, Category: '' }));
+    setState1(() => ({ Title: '', Category: '' }));
   };
 
   return (
@@ -33,7 +33,7 @@ function Booksform(props) {
         <div className="form-group d-flex justify-content-between">
           <div className="mb-3">
             <label htmlFor="exampleFormControlInput1" className="form-label">
-              <input type="text" className="form-control text-box" id="exampleFormControlInput1" placeholder="Title" onChange={handleChange} required />
+              <input type="text" className="form-control text-box" value={state.Title} id="exampleFormControlInput1" placeholder="Title" onChange={handleChange} required />
             </label>
 
           </div>

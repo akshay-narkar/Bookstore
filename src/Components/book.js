@@ -9,7 +9,6 @@ const Book = (props) => {
     <div className="container">
       <div className="row p-4 bookclass justify-content-between align-items-center">
 
-        {/* <td>{Id}</td> */}
         <div className="left-mid col-5">
           <p className="mb-1 categoryname monoreg">{Category}</p>
           <h5 className="titlename roboto fw-bold">{Title}</h5>
@@ -47,7 +46,6 @@ const Book = (props) => {
 
 Book.propTypes = {
   book: PropTypes.shape({
-    // Id: PropTypes.number.isRequired,
     Title: PropTypes.string.isRequired,
     Category: PropTypes.string.isRequired,
   }).isRequired,
