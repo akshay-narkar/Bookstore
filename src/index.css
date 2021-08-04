@@ -72,6 +72,13 @@ body {
   font-size: small;
 }
 
+.oval {
+  padding: 0.875rem;
+  border: solid 2px #e8e8e8;
+  border-radius: 50%;
+  width: 68px;
+}
+
 .text-box {
   width: 35.5rem;
 }

@@ -36,7 +36,9 @@ function Bookslist(props) {
           />
         </div>
         <div>
-          <i className="fas fa-user-circle azure fa-2x" aria-hidden="true" />
+          <div className="oval text-center">
+            <i className="fas fa-user azure fa-2x" aria-hidden="true" />
+          </div>
         </div>
       </div>
       <div className="table-class">
