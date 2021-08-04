@@ -10,7 +10,8 @@ function Bookslist(props) {
   } = props;
 
   const handleRemoveBook = (event) => {
-    removebook(event.target.parentElement.parentElement.id);
+    removebook(event.target.parentElement.parentElement
+      .parentElement.parentElement.parentElement.id);
   };
 
   const handleFilterChange = (event) => {
