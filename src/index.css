@@ -99,6 +99,10 @@ body {
   opacity: 0.5;
 }
 
+option[value=""][disabled] {
+  display: none;
+}
+
 .categoryname {
   font-size: 0.875rem;
 }
