@@ -95,6 +95,10 @@ body {
   width: 12rem;
 }
 
+.catselect:required:invalid {
+  opacity: 0.5;
+}
+
 .categoryname {
   font-size: 0.875rem;
 }
