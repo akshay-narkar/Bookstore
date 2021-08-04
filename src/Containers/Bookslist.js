@@ -46,7 +46,7 @@ function Bookslist(props) {
         <div>
 
           {filteredbooks.map((x, i) => (
-            <div className="bg-white mb-4" key={x.Id} id={i}>
+            <div className="bg-white mb-4" key={Math.random()} id={i}>
               <Book
                 book={x}
                 clickHandler={handleRemoveBook}

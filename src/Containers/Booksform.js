@@ -7,7 +7,6 @@ function Booksform(props) {
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const { addnewbook } = props;
   const [state, setState1] = useState({
-    Id: Math.floor((Math.random() * 1000000)),
     Title: '',
     Category: '',
   });
