@@ -1,10 +1,10 @@
 # Bookstore with React & Redux
 
-An application built using React & Redux to help manage & organize a bookstore
+A Bookstore CMS built for a virtual client using React & Redux to help manage & organize their bookstore
 
-<!-- ## Calculator screenshot
+## Calculator screenshot
 
-![screenshot](./calc.png) -->
+![screenshot](./bookstore.png)
 
 ## Built With
 
@@ -21,7 +21,7 @@ To set up a local copy of the project
 
 - `git clone git@github.com:akshay-narkar/Bookstore.git`
 - `cd Bookstore`
-- `git checkout milestone-4`
+- `git checkout styling`
 
 If you want to repack the file
 
