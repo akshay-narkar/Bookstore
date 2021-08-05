@@ -10,7 +10,8 @@ function Bookslist(props) {
   } = props;
 
   const handleRemoveBook = (event) => {
-    removebook(event.target.parentElement.parentElement.id);
+    removebook(event.target.parentElement.parentElement
+      .parentElement.parentElement.parentElement.id);
   };
 
   const handleFilterChange = (event) => {
@@ -26,36 +27,35 @@ function Bookslist(props) {
   return (
 
     <div className="mt-5">
-      <div className="d-flex d-align-items-center mb-5">
-        <h1 className="m-0">Books</h1>
-        <CategoryFilter
-          clickHandler={handleFilterChange}
-          filtercat={filternew}
-        />
+      <div className="d-flex justify-content-between align-items-center mb-5 bookstore-header d-flex">
+        <div className="d-flex align-items-center">
+          <h1 className="m-0 azure montreg fw-bold">Bookstore CMS</h1>
+          <p className="ms-5 my-0 montreg bookssize">BOOKS</p>
+          <CategoryFilter
+            clickHandler={handleFilterChange}
+            filtercat={filternew}
+          />
+        </div>
+        <div>
+          <div className="oval text-center">
+            <i className="fas fa-user azure" aria-hidden="true" />
+          </div>
+        </div>
       </div>
-      <table className="table">
-        <thead>
-          <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Title</th>
-            <th scope="col">Category</th>
-            <th scope="col">Remove</th>
-
-          </tr>
-        </thead>
-        <tbody>
+      <div className="table-class">
+        <div>
 
           {filteredbooks.map((x, i) => (
-            <tr key={x.Id} id={i}>
+            <div className="bg-white mb-4" key={Math.random()} id={i}>
               <Book
                 book={x}
                 clickHandler={handleRemoveBook}
               />
-            </tr>
+            </div>
           ))}
 
-        </tbody>
-      </table>
+        </div>
+      </div>
     </div>
   );
 }
